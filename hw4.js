@@ -1,3 +1,4 @@
+
 var users = [
     {
       gender: 'female',
@@ -187,20 +188,20 @@ var users = [
       
   }
   
-  function ArrayOfOtherObject(users){
-      var output=[]
+  function MapByName(users){
+      var map=[]
       for(user of users){
-          output.push(OtherObject(user))
+          map[UserName(user)] = UserAge(user)
       }
-      return output
+      return map
   }
   
   function SortByAge(users){
-      return users.sort((a,b) => UserAge(a) > UserAge(b) ? 1 : -1)
+      return users.sort((a,b) => UserAge(a) - UserAge(b))
   }
   console.log(UserName(users[1]))
   console.log(UserAge(users[0]))
   console.log(OtherObject(users[2]))
-  console.log(ArrayOfOtherObject(users))
+  console.log(MapByName(users))
   console.log("original users:" , users)
   console.log("sorted by age: ", SortByAge(users))
